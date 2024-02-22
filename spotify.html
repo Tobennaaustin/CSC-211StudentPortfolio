@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="spotify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+
+<body>
+    <main>
+        <div class="musicplayer">
+            <div id="songInfo">
+                <div class="songcard">
+                    <img id="albumArtwork" src="" alt="Album Artwork">
+                    <div id="songDetails" class="songDetails">
+                        <div id="songTitle"></div>
+                        <div id="artist"></div>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="navigation">
+                        <button id="restartBtn" class="action-refresh">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                        <button id="prevBtn" class="action-back">
+                            <i class="fa fa-backward" aria-hidden="true"></i>
+                        </button>
+                        <button id="playPauseBtn" class="action-btn">
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </button>
+                        <button id="nextBtn" class="action-next">
+                            <i class="fa fa-forward" aria-hidden="true"></i>
+                        </button>
+                        <button class="heart">
+                            <i class="fa fa-heart" id="love"></i>
+                        </button>
+                    </div>
+
+
+                    <audio id="audio" src="" autoplay="false"></audio>
+                    <div class="progress-bar">
+                        <input type="range" name="" id="progress" min="0" value="0" step="0.1">
+                        <!-- <div id="playTime">0:00 / 0:00</div> -->
+                    </div>
+
+                    
+                </div>
+
+                <div class="songicon">
+                    <img src="speaker.svg" alt="">
+                    <img src="mic.svg" alt="">
+                    <img src="queue.svg" alt="">
+                    <img src="device.svg" alt="">
+                    <img src="audio.svg" alt="">
+                    <input type="range" name=""  min="0" value="500" step="0.1">
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card_one">
+                <div class="mini-nav">
+                    <div class="home">
+                        <i class="fa fa-home"></i>
+                        <p>Home</p>
+                    </div>
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <p>Search</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card_two">
+                <div class="nav">
+                    <div class="btns">
+                        <a href="#" class="btn-pre">Explore Premium</a>
+                        <a href="#" class="btn-app"><i class="fa fa-arrow-circle-o-down"></i>Install App</a>
+                        <a href="#" class="bell"><i class="fa fa-bell"></i></a>
+                        <a href="#" class="user"><i class="fa fa-user-o"></i></a>
+                    </div>
+                </div>
+
+                <div class="greeting">
+                    <h1 id="greeting"></h1>
+                </div>
+                <div class="general">
+                    <div class="gen-card" id="like">
+                        <div class="gen-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                        </div>
+                        <div class="gen-cardtxt">
+                            <h2>Liked songs</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="gen-card" id="just ">
+                        <div class="gen-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                        </div>
+                        <div class="gen-cardtxt">
+                            <h2>Just There</h2>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="gen-card" id="pop ">
+                        <div class="gen-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                        </div>
+                        <div class="gen-cardtxt">
+                            <h2>Pop mix</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="gen-card" id="top">
+                        <div class="gen-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                        </div>
+                        <div class="gen-cardtxt">
+                            <h2>2023 Top Nigerian Songs</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="gen-card" id="gen">
+                        <div class="gen-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                        </div>
+                        <div class="gen-cardtxt">
+                            <h2>Don't Call This Number</h2>
+
+                        </div>
+                    </div>
+
+                    <div class="gen-card" id="sad">
+                        <div class="gen-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                        </div>
+                        <div class="gen-cardtxt">
+                            <h2>Sad Songs</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="what-you-like">
+                    <div class="what-you-like-txt">
+                        <p class="left">What you like <span class="right">Show all</span></p>
+                    </div>
+                    <div class="what-you-like-card-con">
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="what-you-like">
+                    <div class="what-you-like-txt">
+                        <p class="left">What you like <span class="right">Show all</span></p>
+                    </div>
+                    <div class="what-you-like-card-con">
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="what-you-like">
+                    <div class="what-you-like-txt">
+                        <p class="left">What you like <span class="right">Show all</span></p>
+                    </div>
+                    <div class="what-you-like-card-con">
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                        <div class="what-you-like-card">
+                            <img src="Aot.jpg" alt="">
+                            <div class="what-you-like-card-txt">
+                                <h4>Hip Hop Mix</h4>
+                                <p>Post Malone, juice WRLD, Kevo Muney</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card_two-foot">
+                    <div class="foot-contain">
+                        <div class="foot-contain-li">
+                            <ul>
+                                <b>Company</b>
+                                <li>About</li>
+                                <li>Jobs</li>
+                                <li>For The record</li>
+                            </ul>
+
+                        </div>
+                        <div class="foot-contain-li">
+                            <ul>
+                                <b>Communities</b>
+                                <li>For Artist</li>
+                                <li>Developers</li>
+                                <li>Advertising</li>
+                                <li>Investors</li>
+                                <li>Vendors</li>
+                            </ul>
+                        </div>
+                        <div class="foot-contain-li">
+                            <ul>
+                                <b>Useful Links</b>
+                                <li>Support</li>
+                                <li>Free Mobile App</li>
+                            </ul>
+                        </div>
+
+                        <div class="foot-contain-li-icon">
+                            <ul>
+                                <li><i class="fa fa-instagram"></i></li>
+                                <li><i class="fa fa-twitter"></i></li>
+                                <li><i class="fa fa-facebook"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="hr">
+
+                    <div class="foottwo">
+                        <ul>
+                            <li>Legal</li>
+                            <li>Privacy Center</li>
+                            <li>Privacy Policy</li>
+                            <li>Cookies</li>
+                            <li>About Ads</li>
+                            <li>Accessibility</li>
+                        </ul>
+                        <p>&copy;2023 Spotify AB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card_three">
+                <div class="card_three-nav">
+                    <div class="card_three-nav1">
+                        <div class="library">
+
+                            <p><span><i class="fa fa-folder-open"></i></span>Your Library</p>
+                            <p class="icon"><span class="plus"><i class="fa fa-plus"></i></span> <span class="right"><i
+                                        class="fa fa-arrow-right"></i></span></p>
+
+
+                        </div>
+                    </div>
+                    <div class="card_three-nav2">
+                        <div class="play">
+                            <a href="#">Playlist</a>
+                        </div>
+                        <div class="artist">
+                            <a href="#">Artists</a>
+                        </div>
+                        <div class="album">
+                            <a href="#">Albums</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_three-body">
+                    <div class="card_three-nav3">
+                        <div class="look">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="resent">
+                            <p>Resent</p>
+                            <i class="fa fa-list-ul"></i>
+                        </div>
+                    </div>
+
+                    <div class="card_three-card">
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+
+                        <div class="card_three-cardimg">
+                            <img src="a tourist guide to love.jpg" alt="">
+                            <div class="txtcon">
+                                <h5>Liked Songs</h5>
+                                <p>Playlist.86 songs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="spotify.js"></script>
+    <script src="music.js"></script>
+</body>
+
+</html>

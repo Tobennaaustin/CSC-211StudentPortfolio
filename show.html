@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: blue;
+    }
+    .container{
+        display:flex;
+    }
+    .card{
+        border-radius: 20px;
+        margin-left: 10px;
+        height: 200px;
+        background-color: #fff;
+        flex: 1;
+        transition: .3s all ease;
+    }
+
+    .card:hover{
+        flex: 2;
+        background-color: rgb(207, 207, 207);
+    }
+</style>
+<body>
+    <input type="password" id="pwd">
+    <input type="checkbox" id="chk"> show Password
+
+
+    <br><br><br>
+
+    <div class="container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div><br><br>
+
+    <div class="container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+    <script>
+        const pwd = document.getElementById("pwd");
+        const chk = document.getElementById("chk");
+
+        chk.onchange = function(e) {
+            pwd.type = chk.checked ? "text" : "password"
+        };
+    </script>
+</body>
+</html>
